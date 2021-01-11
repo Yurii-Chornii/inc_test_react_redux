@@ -1,0 +1,14 @@
+.post-title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.post-box{
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display: block;
+}
+.buttons-box{
+    display: flex;
+    justify-content: flex-end;
+}

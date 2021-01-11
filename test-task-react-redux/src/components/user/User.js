@@ -1,9 +1,18 @@
 import React from 'react';
+import {useDispatch} from "react-redux";
+import {set_posts} from "../../redux/action-creators";
 import './User.css';
 
 export default function User({user, history}) {
+    const dispatch = useDispatch();
+    const getPosts = () => {
+        fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`)
+            .then(value => value.json())
+            .then(value => dispatch(set_posts(value)))
+    }
     const postsBtn = () => {
         history.push(`/posts/${user.id}`)
+        getPosts()
     }
 
     return (
